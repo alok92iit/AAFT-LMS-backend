@@ -29,6 +29,6 @@ app.use(
 );
 app.use('/api',routes)
 
-app.listen(process.env.port, () => {
-  console.log(`server runing on port ${process.env.port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`server runing on port ${process.env.PORT}`)
 })
