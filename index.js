@@ -12,7 +12,7 @@ import passportConfig from "./passportConfig.js";
 
 dbConfig().catch((err) => console.log("the error=", err));
 const app = express()
-app.use(cors({ credentials: true,origin:["superb-bonbon-c7b514.netlify.app","http://127.0.0.1:8080", "http://192.168.56.1:8080", "http://localhost:8080", "http://172.28.240.1:8080", "http://192.168.1.46:8080",]}));
+app.use(cors({ credentials: true,origin:["https://superb-bonbon-c7b514.netlify.app","http://127.0.0.1:8080", "http://192.168.56.1:8080", "http://localhost:8080", "http://172.28.240.1:8080", "http://192.168.1.46:8080",]}));
 
 app.use(passport.initialize());
 passportConfig(passport);
