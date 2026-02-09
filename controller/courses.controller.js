@@ -452,6 +452,10 @@ export const enrolledCourse = async (req, res) => {
                 ],
                 'as': 'assigned'
             }
+        },{
+            "$unwind":{
+                path:"$assigned"
+            }
         }, {
             '$match': {
                 '$expr': [
