@@ -464,7 +464,8 @@ export const enrolledCourse = async (req, res) => {
                 'pipeline': [
                     {
                         '$match': {
-                            'userId': new ObjectId(userId)
+                            'userId': new ObjectId(userId),
+                            "isWatched":true
                         }
                     }
                 ],
