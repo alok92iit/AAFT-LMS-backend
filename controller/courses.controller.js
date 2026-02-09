@@ -456,15 +456,7 @@ export const enrolledCourse = async (req, res) => {
             "$unwind":{
                 path:"$assigned"
             }
-        }, {
-            '$match': {
-                '$expr': [
-                    {
-                        '$size': '$assigned'
-                    }, 0
-                ]
-            }
-        }, {
+        },  {
             '$lookup': {
                 'from': 'courseprogresses',
                 'localField': '_id',
